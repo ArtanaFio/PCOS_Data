@@ -32,3 +32,32 @@ SQL ANALYSIS
 PROJECT GOAL
 
 Provide the pharmaceutical company with valuable insights into the efficacy and safety of the new treatment, potentially leading to improved patient outcomes and informd decision-making in healthcare for patients with PCOS.
+
+
+SOURCES:
+Although all data are simulated for analysis purposes, general statistics were used to inform certain probabilities.
+
+    US Census Bureau, QuickFacts, District of Columnbia:
+    https://www.census.gov/quickfacts/fact/table/DC/PST045223
+
+    Calculating a Healthy BMI for Women: Do Age, Ethnicity, and Muscularity Affect it?
+    https://www.healthline.com/nutrition/bmi-for-women#bmi-chart-and-calculator
+
+    Racial and Ethnic Differences in the Polycystic Ovary Syndrome (PCOS) Metabolic Phenotype
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5420474/
+
+
+DATA GENERATION
+Simulated data was randomly generated using JavaScript.
+
+PERCENTAGES USED TO GENERATE DATA:
+
+Ethnicities:
+    White: 36.5%
+    Black: 43.6 %
+    Hispanic/Latino: 11.7%
+    Asian: 3.9%
+    Indigenous North American: 0.7%
+    Pacific Islander: 0.2%
+    Middle Eastern/North African: 0.2%
+    Multiracial: 3.2%
