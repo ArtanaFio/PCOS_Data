@@ -46,6 +46,9 @@ Although all data are simulated for analysis purposes, general statistics were u
     Racial and Ethnic Differences in the Polycystic Ovary Syndrome (PCOS) Metabolic Phenotype
     https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5420474/
 
+    Current Guidelines for Diagnosing PCOS
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10047373/
+
 
 DATA GENERATION
 Simulated data was randomly generated using JavaScript.

@@ -6,6 +6,12 @@
     <title>Generating Clinical PCOS Treatment Data</title>
     <script src="demographics.js" defer></script>
     <style>
+
+        .flex-container {
+            display: flex;
+            gap: 100px;
+        }
+
         table, th {
             border-collapse: collapse;
         }
@@ -59,26 +65,32 @@
                     <th>BMI (kg/m<sup>2</sup>)</th>
                     <th>Ethnicity</th>
                     <th>Location Type</th>
-                    <th>Socioeconomic Status</th>
+                    <th>Income Level</th>
                 </tr>
             <!-- This just shows how the cells'content should look like
                 <tr>
                     <td class="age">18</td>
                     <td class="body-mass-index">18.5</td>
                     <td class="ethnicity">Asian</td>
-                    <td class="local">Urban</td>
-                    <td class="income"></td>
+                    <td class="local">urban</td>
+                    <td class="income">mid income</td>
                 </tr>
             -->
             </table>
         </div>
         <div class="column">
-            <h3>Treatment Adherence</h3>
+            <h3>Medical History</h3>
+            <p>Medical history: date of diagnosis, diagnosis criteria, severity of symptoms at the time of diagnosis, previous treatments, comorbidities, reproductive history, medication history, family history, lifestyle factors, psychosocial fatctors</p>
+            <p>The Rotterdam criteria is used to diagnose PCOS: participants show any two out of the three key characteristics of PCOS: oligo-amenorrhea, hyperandrogenism, polycystic-appearing ovarian morphology on ultrasonography.</p>
+            <p>Although there is no definitive treatment to cure PCOS itself, there are treatments to minimize symptoms; those treatments are listed under "Previous Treatments".</p>
+            <p>comorbidities: obesity, insulin resistance, type 2 diabetes, hypertension, dyslipidemia cardiovasular disease, depression, anxiety</p>
+
             <table>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Date of Diagnosis</th>
+                    <th>Symptoms</th>
+                    <th>Symptom Severity</th>
+                    <th>Comorbidities</th>
                 </tr>
             </table>
         </div>
