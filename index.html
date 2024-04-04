@@ -23,6 +23,9 @@
             padding: 10px;
             font-weight: bold;
             font-size: 14pt;
+            background-color: gray;
+            color: white;
+            letter-spacing: 1.5px;
         }
 
         td {
@@ -33,32 +36,52 @@
 </head>
 <body>
     <h1>Project - Evaluating Efficacy: SQL Analysis of CLinical Trials for PCOS Treatment</h1>
+    <!--<ul>
+        <li>Medical history: PCOS diagnosis & severity, previous treatments, comorbidities, reproductive history, medication history, family history, lifestyle factors, psychosocial factors</li>
+        <li>Baseline characteristics</li>
+    </ul>-->
     <h2>Patient Data</h2>
-        <ul>
-            <li>Patient demographics: age, BMI, ethnicity, geographic distribution of patients</li>
-            <li>Medical history: PCOS diagnosis & severity, previous treatments, comorbidities, reproductive history, medication history, family history, lifestyle factors, psychosocial factors</li>
-            <li>Baseline characteristics</li>
-        </ul>
-    <h3>Patient Demographics</h3>
     <p>Below are the clinical trial details:</p>
     <ul>
         <li>Sample size: 200 women</li>
         <li>Geographic location/distribution: DMV area</li>
         <li>Age: 18 to 55 years old</li>
     </ul>
-    <table>
-        <tr>
-            <th>Age (years)</th>
-            <th>BMI (kg/m<sup>2</sup>)</th>
-            <th>Ethnicity</th>
-        </tr>
-    <!--
-        <tr>
-            <td class="age">18</td>
-            <td class="body-mass-index">18.5</td>
-            <td class="ethnicity">Asian</td>
-        </tr>
-    -->
-    </table>
+    <div class="flex-container">
+        <div class="column">
+            <h3>Patient Demographics</h3>
+            <p>Patient demographics: age, BMI, ethnicity, geographic distribution of patients, socioeconomic status</p>
+            <p>Geographic distribution of participants are categorized into location types: urban, suburban, and rural.</p>
+            <p>Socioeconomic status of participants is determined by income level: low-, mid-, high-income.</p>
+            <table>
+                <tr>
+                    <th>Age (years)</th>
+                    <th>BMI (kg/m<sup>2</sup>)</th>
+                    <th>Ethnicity</th>
+                    <th>Location Type</th>
+                    <th>Socioeconomic Status</th>
+                </tr>
+            <!-- This just shows how the cells'content should look like
+                <tr>
+                    <td class="age">18</td>
+                    <td class="body-mass-index">18.5</td>
+                    <td class="ethnicity">Asian</td>
+                    <td class="local">Urban</td>
+                    <td class="income"></td>
+                </tr>
+            -->
+            </table>
+        </div>
+        <div class="column">
+            <h3>Treatment Adherence</h3>
+            <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

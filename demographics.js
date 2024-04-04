@@ -1,57 +1,39 @@
 // Randomize demographic information
 
-let row;
-let ethnicityCell;
 const demographicTable = document.querySelector('table');
 
 //Generate synthetic data for a sample size of 200 participants
 for (let i = 0; i < 200; i++) {
-    row = document.createElement('tr');
+    let row = document.createElement('tr');
     demographicTable.appendChild(row);
 
-    ageCell = document.createElement('td');
-    ageCell.classList.add('age');
+    let ageCell = document.createElement('td');
 
 // Generate ages within the range of 18 to 55 years
     function assignAge() {
-        let randomInteger = Math.floor(Math.random() * 100) + 18;
-        if (randomInteger < 18) {
-            return randomInteger;
-        } else if ((randomInteger >= 18) && (randomInteger <= 55)) {
-            return randomInteger;
-        } else {
-            return randomInteger - 55;
-        }
+        let randomInteger = Math.random() * (55 - 18 + 1) + 18;
+        let age = Math.floor(randomInteger);
+        return age;
     };
     ageCell.textContent = assignAge();
     row.appendChild(ageCell);
 
-    BMICell = document.createElement('td');
-    BMICell.classList.add('body-mass-index');
+    let BMICell = document.createElement('td');
 
 // Generate realistic BMI that are neither associated with extreme underweight or extreme obese measurements
     function assignBMI() {
-        let randomNum = Math.random() * 100;
-        let randomDecimal = Math.round(randomNum * 10) / 10;
-
-        if (randomDecimal < 18.5) {
-            randomDecimal += 15;
-        } else if ((randomDecimal >= 18.5) && (randomDecimal < 45)) {
-            return parseFloat(randomDecimal).toFixed(1);
-        } else {
-            randomDecimal -= 35;
-        }
-
-        let newDecimal = randomDecimal.toFixed(1);
-        return parseFloat(newDecimal).toFixed(1);
+        let num = Math.random();
+        let number = num * (45 - 18.5) + 18;
+        let BMINumber = number.toFixed(1);
+        return BMINumber;
     };
     BMICell.textContent = assignBMI();
     row.appendChild(BMICell);
 
-    ethnicityCell = document.createElement('td');
-    ethnicityCell.classList.add('ethnicity');
-
 // Generate realistic occurrences of ethnicities within the DMV area based on a census of the Distric of Columbia
+
+    let ethnicityCell = document.createElement('td');
+
     function assignEthnicity() {
         const ethnicityArray = ["White", "Black", "Hispanic/Latino", "Asian", "Indigenous North American", "Pacific Islander", "Middle Eastern/North African", "Multiracial"];
 
@@ -77,4 +59,46 @@ for (let i = 0; i < 200; i++) {
     };
     ethnicityCell.textContent = assignEthnicity();
     row.appendChild(ethnicityCell);
+
+// Generate location type
+
+    let locationCell = document.createElement('td');
+
+    function assignLocation() {
+        const locationArray = ["Urban", "Suburban", "Rural"];
+
+        let localNum = Math.random() * 100;
+
+        if (localNum <= 50) {
+            return locationArray[0];
+        } else if ((localNum > 50) && (localNum <= 85)) {
+            return locationArray[1];
+        } else {
+            return locationArray[2];
+        }
+
+    };
+    locationCell.textContent = assignLocation();
+    row.appendChild(locationCell);
+
+// Generate income levels
+
+    let incomeCell = document.createElement('td');
+
+    function assignIncome() {
+        const incomeArray = ["low income", "mid income", "high income"];
+
+        let incomeNum = Math.random().toFixed(2);
+
+        if (incomeNum < 0.5) {
+            return incomeArray[0]
+        } else if ((incomeNum >= 0.5) && (incomeNum < 0.9)) {
+            return incomeArray[1];
+        } else {
+            return incomeArray[2];
+        }
+    }
+    incomeCell.textContent = assignIncome();
+    row.appendChild(incomeCell);
+    
 }
